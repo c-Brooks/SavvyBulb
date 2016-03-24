@@ -1,0 +1,119 @@
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#76FF7A"
+
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="15dp"
+    tools:context="com.example.owner.savvybulb.MainActivity" >
+    <!-- tools:showIn="@layout/list_fragment"> -->
+
+    <Button
+        android:id="@+id/monBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginRight="140dp"
+
+        android:background="#EFCC00"
+        android:text="MON"/>
+    <Button
+        android:id="@+id/tuesBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginRight="47dp"
+
+        android:background="#EFCC00"
+        android:text="TUES"/>
+    <Button
+        android:id="@+id/wedBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginLeft="47dp"
+
+        android:background="#EFCC00"
+        android:text="WED"/>
+
+    <Button
+        android:id="@+id/thursBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginLeft="140dp"
+
+        android:background="#EFCC00"
+        android:text="THURS"/>
+    <Button
+        android:id="@+id/friBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="100dp"
+
+        android:background="#EFCC00"
+        android:text="FRI"/>
+    <Button
+        android:id="@+id/satBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="55dp"
+
+        android:background="#EFCC00"
+        android:text="SAT"/>
+    <Button
+        android:id="@+id/sunBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="55dp"
+
+        android:background="#EFCC00"
+        android:text="SUN"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="200dp"
+        android:text="DIM"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="175dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="125dp"
+
+        android:text="STROBE"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="100dp"
+        />
+
+</FrameLayout>
