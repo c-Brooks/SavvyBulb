@@ -20,8 +20,31 @@ public class Home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.home_content, container, false);
+
+        final Button onBtn  = (Button) v.findViewById(R.id.onBtn);
+        final Button offBtn = (Button) v.findViewById(R.id.offBtn);
+
+        onBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                onBtn.setBackgroundColor(0x0FDFF00);
+//                offBtn.setBackgroundColor(0x0EFCC00);
+
+                Particle.sendDim(Particle.light, 128);
+            }
+        });
+
+        offBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                offBtn.setBackgroundColor(0x0FDFF00);
+//                onBtn.setBackgroundColor(0x0EFCC00);
+
+                Particle.sendDim(Particle.light, 0);
+            }
+        });
+
         final SeekBar dimBar = (SeekBar) v.findViewById(R.id.homeDimBar);
-        final TextView dimText = (TextView) v.findViewById(R.id.dimText);
 
         dimBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -36,20 +59,9 @@ public class Home extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                // FOR TESTING //
                 seekBar.setMax(128);
-                dimText.setText("DIM:  " + progress);
-
-                Particle.sendDim(Particle.light(), progress);
-                // IMPLEMENT ACTUAL CODE LATER //
-
+                Particle.sendDim(Particle.light, progress);
             }
         });
-
-
-
-
-
-
-
 
         return v;
     }

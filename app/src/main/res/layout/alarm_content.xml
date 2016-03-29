@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#76FF7A"
+    android:background="#3D64B3"
 
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
@@ -91,6 +91,7 @@
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="200dp"
         android:text="DIM"
+        android:textColor="#EFCC00"
         />
 
     <SeekBar
@@ -98,6 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="175dp"
+        android:backgroundTint="#EFCC00"
+
         />
 
     <TextView
@@ -107,6 +110,8 @@
         android:layout_marginBottom="125dp"
 
         android:text="STROBE"
+        android:textColor="#EFCC00"
+
         />
 
     <SeekBar

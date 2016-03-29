@@ -1,5 +1,6 @@
 package com.example.owner.savvybulb;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
@@ -36,9 +37,14 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         ParticleCloudSDK.init(this);
         if (savedInstanceState == null)
-            Particle.login();
+        {
 
-        ParticleDevice light = Particle.light();
+//            Particle.login();
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
