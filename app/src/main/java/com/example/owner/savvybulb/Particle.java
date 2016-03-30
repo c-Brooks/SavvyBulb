@@ -61,14 +61,11 @@ public class Particle extends Activity {
     {
         // stdTime has to be converted into UNIX time, pcBright is % brightness when alarm goes off.
 
-
-
     }
 
     static void sendTimer(ParticleDevice light, int time)
     {
         // time is an integer containing number of seconds UNTIL timer goes off.
-
 
     }
 

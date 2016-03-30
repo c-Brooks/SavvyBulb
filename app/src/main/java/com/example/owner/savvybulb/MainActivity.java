@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity
 
 //            Particle.login();
 
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            startActivity(intent);
 
         }
 
@@ -91,7 +91,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -112,12 +114,9 @@ public class MainActivity extends AppCompatActivity
 
             fragTrans2.addToBackStack(null);
 
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
+            // ADD SETTINGS CODE
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

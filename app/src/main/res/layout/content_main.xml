@@ -21,7 +21,7 @@
         android:gravity="center|center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="SWIPE RIGHT TO SELECT LIGHT"
+        android:text="SELECT OPTION FROM BOTTOM"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView"

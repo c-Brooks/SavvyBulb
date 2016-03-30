@@ -68,7 +68,6 @@ public class LoginActivity extends AppCompatActivity {
                                 mDevice = sparkCloud.getDevice("3e003e000f47343432313031");
 
                                 return -1;
-
                             }
 
                             @Override
