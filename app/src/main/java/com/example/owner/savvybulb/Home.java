@@ -14,8 +14,7 @@ import android.widget.TextView;
 
 public class Home extends Fragment {
 
-    public Home(/* Add parameter for which light? */) {}
-
+    public Home() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
@@ -59,8 +58,7 @@ public class Home extends Fragment {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-               // FOR TESTING //
-                seekBar.setMax(128);
+                seekBar.setMax(100);
                 Particle.sendDim(Particle.light, progress);
             }
         });

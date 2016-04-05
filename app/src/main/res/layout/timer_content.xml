@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="175dp"
         android:text="DIM"
         android:textColor="#EFCC00"
         />
@@ -34,56 +34,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="175dp"
+        android:layout_marginBottom="145dp"
         />
 
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker"
-        android:layout_gravity="left|top"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
+    <TimePicker
+        android:timePickerMode="spinner"
+        android:id="@+id/timePick"
 
-        />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/numberPicker2"
-        android:layout_gravity="left|top"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="90dp"
-        />
+        android:layout_gravity="center|top"
+        android:layout_marginTop="50dp"
 
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker3"
-        android:layout_gravity="right|top"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker4"
-        android:layout_gravity="right|top"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="90dp"
         />
 
     <Button
+        android:id="@+id/setBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:text="SET"
         android:background="#EFCC00"
 
         />
 
+    <EditText
+        android:id="@+id/alarmTxt"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        />
 
 
 </FrameLayout>

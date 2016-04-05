@@ -15,12 +15,12 @@
 <FrameLayout
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="430dp">
+    android:layout_height="475dp">
 
     <TextView
         android:gravity="center|center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:text="SELECT OPTION FROM BOTTOM"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

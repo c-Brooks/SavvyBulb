@@ -1,7 +1,6 @@
 <FrameLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
 
@@ -11,11 +10,16 @@
     android:background="#3D64B3"
 
     android:paddingBottom="0dp"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp"
-    android:paddingTop="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="0dp"
     tools:context="com.example.owner.savvybulb.MainActivity" >
+
     <!-- tools:showIn="@layout/list_fragment"> -->
+
+
+    <!--   android:background="#EFCC00"
+
 
     <Button
         android:id="@+id/monBtn"
@@ -82,43 +86,52 @@
         android:layout_marginTop="55dp"
 
         android:background="#EFCC00"
-        android:text="SUN"/>
-
+  -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="20dp"
         android:text="DIM"
         android:textColor="#EFCC00"
         />
 
     <SeekBar
+        android:id="@+id/dimBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="175dp"
+        android:layout_marginBottom="0dp"
         android:backgroundTint="#EFCC00"
 
         />
 
-    <TextView
+    <Button
+        android:id="@+id/setBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="125dp"
-
-        android:text="STROBE"
-        android:textColor="#EFCC00"
-
+        android:layout_gravity="center|right"
+        android:background="#EFCC00"
+        android:text="SET"
+        android:layout_marginTop="110dp"
         />
 
-    <SeekBar
-        android:layout_width="match_parent"
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:timePickerMode="spinner"
+        android:id="@+id/timePick"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="110dp"
+    />
+
+    <DatePicker
+        android:id="@+id/datePick"
+        android:datePickerMode="spinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="100dp"
+        android:layout_gravity="center_horizontal|top"
         />
 
 </FrameLayout>

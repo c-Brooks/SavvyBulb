@@ -50,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
                                     runOnUiThread(mainThread);
 
                                 }
-
                                 return null;
                             }
 
