@@ -20,8 +20,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Alarm extends Fragment {
-
-    Fragment frag;
+    int i = 0;
 
     public Alarm() {}
 
@@ -29,7 +28,6 @@ public class Alarm extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.alarm_content, container, false);
-        int dim = 0;
 
         final TimePicker timePick = (TimePicker) v.findViewById(R.id.timePick);
         final DatePicker datePick = (DatePicker) v.findViewById(R.id.datePick);
@@ -42,20 +40,27 @@ public class Alarm extends Fragment {
             @Override
             public void onClick(View v) {
 
+                i++; // can only set 6 alarms
                 int yr, mth, day, hr, min;
                 int timeSec;
 
-                if (Build.VERSION.SDK_INT >= 23)
-                { hr  = timePick.getHour();        min = timePick.getMinute(); }
-                else
-                { hr  = timePick.getCurrentHour(); min = timePick.getCurrentMinute(); }
-                  mth = datePick.getMonth();
-                  day = datePick.getDayOfMonth();
-                  yr  = datePick.getYear();
+                if (i <= 6) {
+                    if (Build.VERSION.SDK_INT >= 23) {
+                        hr = timePick.getHour();
+                        min = timePick.getMinute();
+                    } else {
+                        hr = timePick.getCurrentHour();
+                        min = timePick.getCurrentMinute();
+                    }
+                    mth = datePick.getMonth();
+                    day = datePick.getDayOfMonth();
+                    yr = datePick.getYear();
 
-                timeSec = componentTimeToTimestamp(yr, mth, day, hr, min);
-                Particle.sendAlarm(Particle.light, timeSec, getDim(dimBar));
-                Toast.makeText(getContext(), "Alarm set for "+mth+" "+day+", "+yr+" at "+hr+":"+min, Toast.LENGTH_LONG);
+                    timeSec = componentTimeToTimestamp(yr, mth, day, hr, min);
+                    Toast.makeText(getContext(), "Alarm set for " + mth + " " + day + ", " + yr + " at " + hr + ":" + min, Toast.LENGTH_LONG).show();
+                    Particle.sendAlarm(Particle.light, timeSec, getDim(dimBar));
+                }
+                else { Toast.makeText(getContext(), "Error: more than 6 alarms set", Toast.LENGTH_LONG).show(); }
             }
         });
         return v;
